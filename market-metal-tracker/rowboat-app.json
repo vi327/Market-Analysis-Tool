@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "name": "market-metal-tracker",
+  "version": "0.2.0",
+  "description": "Live stock market & metals tracker with real-time quotes, TradingView charts, JustMarkets integration, and financial news feeds.",
+  "capabilities": [],
+  "agents": ["market-refresh.yaml"],
+  "dataContracts": [
+    {
+      "file": "data.json",
+      "requiredKeys": ["updatedAt", "stocks", "metals", "news"],
+      "nonEmptyArrayKeys": []
+    }
+  ]
+}
