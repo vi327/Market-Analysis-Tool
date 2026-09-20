@@ -1,0 +1,9 @@
+name: market-refresh
+instructions: |
+  Refresh stock market, metals prices, and news feeds for the market-metal-tracker app.
+  1. Fetch stock and metals quotes via fetch-url using Yahoo Finance chart endpoints (e.g. ^GSPC, ^IXIC, ^DJI, AAPL, NVDA, MSFT, GC=F, SI=F, PL=F, PA=F, HG=F, ALI=F with interval=1d&range=5d).
+  2. Fetch latest market news feeds from https://www.mining.com/feed/ and https://www.cnbc.com/id/10001147/device/rss/rss.html.
+  3. Format the updated data according to the dataContract with keys updatedAt, stocks, metals, news.
+  4. Write the payload using app-set-data for appFolder "market-metal-tracker" and file "data.json".
+triggers:
+  cronExpr: "0 * * * *"
